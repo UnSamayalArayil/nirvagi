@@ -1,8 +1,11 @@
 'use strict';
 
-var respawn = require('respawn')
-  , path = require('path')
-  , util = require('util')
-  , logger = require(path.join(__dirname, 'lib', 'logger'));
+var path = require('path')
+  , spark = require('./lib/spark')
+  , logger = require('./lib/logger');
 
 var loop = setInterval(function() {}, 60000);
+
+spark.on('update', function(data) {
+  logger.info(data);
+});
