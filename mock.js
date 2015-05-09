@@ -4,7 +4,7 @@ var megam = require('./lib/megam');
 
 setInterval(function() {
   var data = {
-    name: 'device' + randomIntInc(1, 5),
+    name: 'devicemock',
     weight: randomIntInc(1, 1000)
   };
   megam.send(data);
